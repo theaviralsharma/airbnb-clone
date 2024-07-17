@@ -67,7 +67,7 @@ const sessionConfig = {
   cookie: {
     // Ref: https://www.npmjs.com/package/express-session#store
     httpOnly: true, // JS cannot access the cookie on the client side
-    secure: process.env.NODE_ENV === 'production', // cookie only sent over HTTPS
+    secure: false, // cookie only sent over HTTPS
     expires: Date.now() + 1000 * 60 * 60 * 24 * 7, // 1 week
     maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week
   },
